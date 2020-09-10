@@ -22,7 +22,7 @@ class InscriptionController extends AbstractController
     /**
      * @Route("/inscription", name="inscription")
      */
-    public function index()
+    public function index(Request $request)
     {
 
         $user = new User();
@@ -47,7 +47,7 @@ class InscriptionController extends AbstractController
         }
 
         return $this->render('inscription/index.html.twig', [
-            'controller_name' => 'InscriptionController',
+            'form' => $form->createView(),
         ]);
     }
 }
