@@ -9,8 +9,7 @@ body %}
           {% if app.user != null %}
           <table class="table">
             <tr>
-              <th>Votre nom d'utilisateur</th>
-              <th>{{ app.user.getUsername() }}</th>
+              <th>Votre nom d'utilisateur : {{ app.user.getUsername() }}</th>
             </tr>
           </table>
           {% endif %}
