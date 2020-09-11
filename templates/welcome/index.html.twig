@@ -9,12 +9,8 @@ body %}
           {% if app.user != null %}
           <table class="table">
             <tr>
-              <th>Votre Nom</th>
-               <th>{{ app.user.name }}</th>
-            </tr>
-            <tr>
-              <th>Votre email</th>
-              <th>{{ app.user.email }}</th>
+              <th>Votre nom d'utilisateur</th>
+              <th>{{ app.user.getUsername() }}</th>
             </tr>
           </table>
           {% endif %}
