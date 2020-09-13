@@ -11,6 +11,14 @@ body %}
             <tr>
               <th>Votre nom d'utilisateur : {{ app.user.getUsername() }}</th>
             </tr>
+            <tr>
+              <th>Votre Roles : </th>
+                {% for role in app.user.getroles() %}
+              <tr>
+                <td>{{ role }}</td>
+              </tr>
+              {% endfor %}
+            </tr>
           </table>
           {% endif %}
         </div>
